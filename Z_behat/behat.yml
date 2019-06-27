@@ -1,14 +1,13 @@
 default:
-  extensions:
-    Behat\MinkExtension:
-          default_session: selenium2 
-          selenium2:         
-                  url: 'https://google.com'
-                  host: 'eu1.appium.testobject.com'                  
-                  port: 443
-                  browser: 'chrome'
-                  capabilities:
-                      testobject_api_key: 'A1847E03C4E0435E8B9D27EB05FB89B6'
-                      platformName: 'Android'                      
-                      platformVersion: '7'
-                      deviceName: 'LG_Nexus_5X_free'
+    extensions:
+        appium\php-client:
+            base_url: 'http://en.wikipedia.org/wiki/Main_Page'
+            default_session: selenium2
+            browser_name: Chrome
+            selenium2:
+                browser: Chrome
+                wd_host: 'rohitv:893e78f8-618c-4066-816d-180882528e6d@ondemand.saucelabs.com:80/wd/hub'
+                capabilities:
+                    platform: 'Android'
+                    browser: Chrome
+                    version: latest
