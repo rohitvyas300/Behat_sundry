@@ -1,0 +1,30 @@
+default:
+    extensions:
+        Behat\MinkExtension:
+            base_url: 'http://en.wikipedia.org/wiki/Main_Page'
+            default_session: selenium2
+            browser_name: Chrome
+            selenium2:
+                browser: Chrome
+                wd_host: 'rohitv:893e78f8-618c-4066-816d-180882528e6d@ondemand.saucelabs.com:80/wd/hub'
+                capabilities:
+                    platform: 'Android'
+                    browser: Chrome
+                    version: latest
+
+                    
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver:
+            url: 'https://google.com'
+            host: 'eu1.appium.testobject.com'
+            # host: 'us1.appium.testobject.com'  #Your device is located in the US ? , then uncomment this line and remove the previous one.
+            port: 80
+            browser: chrome
+            capabilities:
+                testobject_api_key: 'YOUR_API_KEY'
+                platformName: 'Android'
+                # supply `platformVersion` without `deviceName` to get any available device with that version dynamically
+                platformVersion: '7' # Optional
+                deviceName: 'Samsung Galaxy S8' # Optional
